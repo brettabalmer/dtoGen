@@ -2,6 +2,7 @@ using NSwag.CodeGeneration.TypeScript;
 using NSwag;
 using System.Reflection;
 using Microsoft.AspNetCore.Mvc;
+using NSwag.CodeGeneration.OperationNameGenerators;
 
 public class TsClientGenerator
 {
@@ -13,6 +14,10 @@ public class TsClientGenerator
         var settings = new TypeScriptClientGeneratorSettings
         {
             ClassName = "{controller}Client",
+            GenerateClientClasses = true,
+            //UseGetBaseUrlMethod = true,
+            OperationNameGenerator = new MultipleClientsFromFirstTagAndOperationIdGenerator()
+            
         };
 
         var generator = new TypeScriptClientGenerator(document, settings);

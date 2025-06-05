@@ -1,3 +1,5 @@
+using System.Reflection.Metadata.Ecma335;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -29,7 +31,7 @@ var summaries = new[]
     "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
 };
 
-app.MapGet("/weatherforecast", () =>
+app.MapGet("/weather/forecast", () =>
 {
     var forecast = Enumerable.Range(1, 5).Select(index =>
         new WeatherForecast
@@ -41,12 +43,18 @@ app.MapGet("/weatherforecast", () =>
         .ToArray();
     return forecast;
 })
-.WithName("GetWeatherForecast");
+.WithName("GetForecast")
+.WithTags("Weather");
+
+app.MapGet("/users/current", () => new UserDto("Brett")).WithName("Current").WithTags("Users");
+
+#pragma warning disable CS4014 // Because this call is not awaited, execution of the current method continues before the call is completed
 Task.Run(async () =>
-{
-    Thread.Sleep(5000); // wait for the server to start
-    await new TsClientGenerator().SimpleGenerate( "http://localhost:5016/swagger/v1/swagger.json");
-});
+    {
+        Thread.Sleep(2000); // wait for the server to start
+        await new TsClientGenerator().SimpleGenerate("http://localhost:5016/swagger/v1/swagger.json");
+    });
+#pragma warning restore CS4014 // Because this call is not awaited, execution of the current method continues before the call is completed
 
 app.Run();
 
@@ -56,3 +64,5 @@ record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
 {
     public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
 }
+
+record UserDto(string name);

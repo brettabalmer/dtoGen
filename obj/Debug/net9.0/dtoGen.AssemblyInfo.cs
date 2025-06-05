@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("dtoGen")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4da4ced4e7aa5c07828b7c29ebb13cfb3b97d7f4")]
 [assembly: System.Reflection.AssemblyProductAttribute("dtoGen")]
 [assembly: System.Reflection.AssemblyTitleAttribute("dtoGen")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
