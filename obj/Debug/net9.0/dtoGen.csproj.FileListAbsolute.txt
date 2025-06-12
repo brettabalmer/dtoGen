@@ -31,7 +31,6 @@
 /Users/brettbalmer/code/dtoGen/obj/Debug/net9.0/dtoGen.pdb
 /Users/brettbalmer/code/dtoGen/obj/Debug/net9.0/dtoGen.genruntimeconfig.cache
 /Users/brettbalmer/code/dtoGen/obj/Debug/net9.0/ref/dtoGen.dll
-/Users/brettbalmer/code/dtoGen/bin/Debug/net9.0/nswag.json
 /Users/brettbalmer/code/dtoGen/bin/Debug/net9.0/Fluid.dll
 /Users/brettbalmer/code/dtoGen/bin/Debug/net9.0/Namotion.Reflection.dll
 /Users/brettbalmer/code/dtoGen/bin/Debug/net9.0/Newtonsoft.Json.dll
@@ -52,3 +51,4 @@
 /Users/brettbalmer/code/dtoGen/bin/Debug/net9.0/Parlot.dll
 /Users/brettbalmer/code/dtoGen/bin/Debug/net9.0/TimeZoneConverter.dll
 /Users/brettbalmer/code/dtoGen/bin/Debug/net9.0/YamlDotNet.dll
+/Users/brettbalmer/code/dtoGen/obj/Debug/net9.0/dtoGen.sourcelink.json
